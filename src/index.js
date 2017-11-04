@@ -1,20 +1,16 @@
-var name;
-var address;
-var dateOfBirth;
+var name = localStorage.getItem("betoatsume-name");
+var address = localStorage.getItem("betoatsume-address");
+var dateOfBirth = localStorage.getItem("betoatsume-dob");
+
+console.log(name);
+console.log(address);
+console.log(dateOfBirth);
+
+if (name && address && dateOfBirth) {
+  window.location.href = "office.html";
+}
 
 $(document).ready(function() {
-  name = localStorage.getItem("betoatsume-name");
-  address = localStorage.getItem("betoatsume-address");
-  dateOfBirth = localStorage.getItem("betoatsume-dob");
-  
-  console.log(name);
-  console.log(address);
-  console.log(dateOfBirth);
-  
-  if (name && address && dateOfBirth) {
-    window.location.href = "office.html";
-  }
-  
   $("#continuebutton").prop('disabled', true);
   
   //TODO: check if dob field is well-formatted, not just truthy,
@@ -33,9 +29,11 @@ $(document).ready(function() {
   
   continueButton = document.getElementById('continuebutton');
   continueButton.addEventListener('click', function() {
-    name = localStorage.setItem("betoatsume-name", $("#nameinput").val());
-    address = localStorage.setItem("betoatsume-address", $("#addressinput").val());
-    dateOfBirth = localStorage.setItem("betoatsume-dob", $("#dateinput").val());
+    localStorage.setItem("betoatsume-name", $("#nameinput").val());
+    localStorage.setItem("betoatsume-address", $("#addressinput").val());
+    localStorage.setItem("betoatsume-dob", $("#dateinput").val());
+    localStorage.setItem("betoatsume-clout", '0');
+
     window.location.href = "office.html";
   }, false);
 })
