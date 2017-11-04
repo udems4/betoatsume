@@ -11,12 +11,6 @@ $(document).ready(function() {
         changePoints(1);
         setPointBalanceText();
     }, false);
-
-    removePointButton = document.getElementById('spendpoints');
-    removePointButton.addEventListener('click', function() {
-        changePoints(-1);
-        setPointBalanceText()
-    }, false);
  })
   
 function setPointBalanceText() {
