@@ -19,7 +19,9 @@ $(document).ready(function() {
  })
 
 function whomCalled() {
-	$("#callee").text("Last Phone Call: " + callee + " Voting Status: " + registrationStatus(registration) + " Choice: " + candidateChoice(candidate));
+	$("#callee").text("Last Phone Call: " + callee);
+	$("#registered").text(callee + "'s Registration Status: " + registrationStatus(registration));
+	$("#choice").text(callee + "'s Candadite Preference: " + candidateChoice(candidate));
 }	
 
 function agreement(response) {
