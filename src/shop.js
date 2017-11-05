@@ -57,22 +57,7 @@ function addClickHandlers() {
         alert("You do not have enough points to buy this!");
       }
     });
-
-	$(this).keypress(function (e) {
-		if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
-			 var item = getItem(key);
-			 var isCharged = changePoints(-1 * item.cost);
-
-			if (isCharged) {
-				localStorage.setItem("betoatsume-item-" + item.key, "true");
-				$(this).remove();
-			} else {
-				alert("You do not have enough points to buy this!");
-			}
-		}
   });
-
-}
 }
 
 function getItem(key) {
