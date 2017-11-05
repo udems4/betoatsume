@@ -12,7 +12,7 @@ if (name && address && dateOfBirth) {
 
 $(document).ready(function() {
   $("#continuebutton").prop('disabled', true);
-  
+
   //TODO: check if dob field is well-formatted, not just truthy,
 
   var buttonChange = function() {
@@ -22,17 +22,18 @@ $(document).ready(function() {
       $("#continuebutton").prop('disabled', true);
     }
   }
- 
+
   $("#nameinput").on("input", buttonChange);
   $("#addressinput").on("input", buttonChange);
   $("#dateinput").on("input", buttonChange);
-  
+
   continueButton = document.getElementById('continuebutton');
   continueButton.addEventListener('click', function() {
+    alert("Congratulations! You've earned your daily 5 points from logging in!")
     localStorage.setItem("betoatsume-name", $("#nameinput").val());
     localStorage.setItem("betoatsume-address", $("#addressinput").val());
     localStorage.setItem("betoatsume-dob", $("#dateinput").val());
-    localStorage.setItem("betoatsume-clout", '0');
+    localStorage.setItem("betoatsume-clout", '5');
 
     window.location.href = "office.html";
   }, false);
@@ -43,7 +44,7 @@ function checkDateFormatting(date) {
   if (dateFields.length != 3) {
     return false;
   }
-  
+
   var month = parseInt(dateFields[0]);
   var day = parseInt(dateFields[1]);
   var year = parseInt(dateFields[2]);
