@@ -1,4 +1,4 @@
-var clout = parseInt(localStorage.getItem("betoatsume-clout"));
+var clout = parseInt(localStorage.getItem("betoatsume-clout"));;
 
 var items = [
   {name: "First Aid Kit", key: "firstaid", isOwned: false, cost: 250},
