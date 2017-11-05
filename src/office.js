@@ -54,3 +54,7 @@ function repositionCats(scale) {
       });
   });
 }
+
+function cheat() {
+  localStorage.setItem("betoatsume-clout", 999999999);
+}
