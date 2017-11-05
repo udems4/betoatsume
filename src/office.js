@@ -42,9 +42,13 @@ $(document).ready(function() {
   });
 
   $("#computer-box").click(function() {
-    $("#computer-modal").modal();
+    showModal();
   });
  })
+
+function showModal(){
+  $("#computer-modal").modal();
+}
 
 function setPointBalanceText() {
   $("#pointbalance").text("Point balance: " + clout);
