@@ -4,7 +4,7 @@ var clout = parseInt(localStorage.getItem("betoatsume-clout"));
 $(document).ready(function() {
   setPointBalanceText();
 	setHeaderText();
-  
+
   $("#images").append("<img src=\"./img/betocat.png\" class=\"catimg\">");
   $("#images").append("<img src=\"./img/betocat.png\" class=\"catimg\">");
   $("#images").append("<img src=\"./img/betocat.png\" class=\"catimg\">");
@@ -18,9 +18,13 @@ $(document).ready(function() {
   });
 
   $("#computer-box").click(function() {
-    $("#computer-modal").modal();
+    showModal();
   });
  })
+
+function showModal(){
+  $("#computer-modal").modal();
+}
 
 function setPointBalanceText() {
   $("#pointbalance").text("Point balance: " + clout);
