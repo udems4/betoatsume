@@ -13,6 +13,6 @@ function getPhoneBankData(form){
       }
   }
   var oldVal = localStorage.getItem("betoatsume-clout");
-  localStorage.setItem(oldVal + 50);
+  localStorage.setItem("betoatsume-clout", oldVal + 50);
 
 }
