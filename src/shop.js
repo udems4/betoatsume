@@ -36,7 +36,7 @@ function loadItems() {
       items[i].isOwned = true;
     } else {
       console.log("HERE");
-      $("#itemlist").append("<li tabindex = \"0\" id=\"item-" + items[i].key + "\" class=\"text-primary\">" + items[i].name + ": " + items[i].cost + " points</li>");
+      $("#itemlist").append("<li tabindex = \"0" id=\"item-" + items[i].key + "\" class=\"text-primary\">" + items[i].name + ": " + items[i].cost + " points</li>");
     }
   }
 }
