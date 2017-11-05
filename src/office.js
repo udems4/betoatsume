@@ -80,6 +80,7 @@ function repositionCats(scale) {
 }
 
 function cheat() {
+  clout = 9999999;
   localStorage.setItem("betoatsume-clout", "9999999");
 }
 
