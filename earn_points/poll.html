@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<style>
+  h1, h2, p, form {
+    margin: 10px;
+  }
+</style>
+<script src="../src/poll.js"></script>
+
+</head>
+<body>
+
+<h1>Opinion Poll</h1>
+<br />
+<form action="../office.html">
+Gerrymandering is a threat to democracy<br />
+ <input type="radio" name="question1" value="Strongly Agree"> Strongly Agree<br>
+ <input type="radio" name="question1" value="Agree"> Agree<br>
+ <input type="radio" name="question1" value="Neither Agree nor Disagree"> Neither Agree nor Disagree<br>
+ <input type="radio" name="question1" value="Disagree"> Disagree<br>
+  <input type="radio" name="question1" value="Strongly Disagree"> Strongly Disagree<br>
+  <br />
+How do you feel about your state's education spending?<br />
+<input type="radio" name="question2" value="Strongly Agree"> Spends way too much<br>
+<input type="radio" name="question2" value="Agree"> Spends a bit too much<br>
+<input type="radio" name="question2" value="Neither Agree nor Disagree"> Spends about the right amount<br>
+<input type="radio" name="question2" value="Disagree"> Does not spend enough<br>
+ <input type="radio" name="question2" value="Strongly Disagree"> Does not spend nearly enough<br>
+ <br />
+Your local government is doing a better job than your state government.<br />
+ <input type="radio" name="question3" value="Strongly Agree"> Strongly Agree<br>
+ <input type="radio" name="question3" value="Agree"> Agree<br>
+ <input type="radio" name="question3" value="Neither Agree nor Disagree"> Neither Agree nor Disagree<br>
+ <input type="radio" name="question3" value="Disagree"> Disagree<br>
+  <input type="radio" name="question3" value="Strongly Disagree"> Strongly Disagree<br>
+  <br />
+
+ <input type="submit" name="submit" value="Submit and Earn 10 points!" onClick="getPollData(this.form)">
+</form>
+</body>
