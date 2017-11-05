@@ -12,7 +12,7 @@ function getPhoneBankData(form){
         break;
       }
   }
-  var oldVal = localStorage.getItem("betoatsume-clout");
+  var oldVal = parseInt(localStorage.getItem("betoatsume-clout"));
   localStorage.setItem("betoatsume-clout", oldVal + 50);
 
 }
