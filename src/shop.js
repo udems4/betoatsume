@@ -36,7 +36,7 @@ function loadItems() {
       items[i].isOwned = true;
     } else {
       console.log("HERE");
-      $("#itemlist").append("<li tabindex = \"0" id=\"item-" + items[i].key + "\" class=\"text-primary\">" + items[i].name + ": " + items[i].cost + " points</li>");
+      $("#itemlist").append("<li tabindex = \"0\" id=\"item-" + items[i].key + "\" class=\"text-primary\">" + items[i].name + ": " + items[i].cost + " points</li>");
     }
   }
 }
@@ -57,6 +57,23 @@ function addClickHandlers() {
         alert("You do not have enough points to buy this!");
       }
     });
+	
+	$(this).keypress(function(e) {
+		if((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)){
+			var item = getItem(key);
+			var isCharged = changePoints(-1 * item.cost);
+
+			if (isCharged) {
+				localStorage.setItem("betoatsume-item-" + item.key, "true");
+				$(this).remove();
+			} else {
+				alert("You do not have enough points to buy this!");
+			}
+		}
+		
+      
+    });
+	
   });
 }
 

@@ -5,8 +5,23 @@ h1, h2, p, form, h3 {
   margin: 10px;
 }
 
-body {
+#body {
   background-image: url("../img/background.PNG");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+#images {
+  position: absolute;
+}
+
+.catimg {
+  float: left;
+  position: relative;
+  width: 200px;
+}
+
+#computer-box {
+  background-color: rgba(0, 0, 255, 0);
+  position: absolute;
 }
